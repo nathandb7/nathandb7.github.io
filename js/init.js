@@ -39,3 +39,8 @@ let getJSONData = function(url){
         return result;
     });
 }
+
+if (localStorage.getItem("email") == null) {
+  alert("debe iniciar sesion");
+  window.location.href = "login.html";
+}

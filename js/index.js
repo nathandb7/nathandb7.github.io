@@ -12,3 +12,8 @@ document.addEventListener("DOMContentLoaded", function(){
         window.location = "products.html"
     });
 });
+
+logout.addEventListener('click', (e) => {
+    localStorage.clear();
+    window.location = "login.html";
+});
