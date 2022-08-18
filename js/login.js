@@ -1,6 +1,8 @@
 const email = document.getElementById('email');
 const password = document.getElementById('password');
 const button = document.getElementById('button');
+const mensajee = document.getElementById('mensajee');
+const mensajep = document.getElementById('mensajep');
 
 button.addEventListener('click', (e) => {
     e.preventDefault()
@@ -12,10 +14,12 @@ button.addEventListener('click', (e) => {
     }
     if (data.email == em && data.password == pa) {
         localStorage.setItem("email", email);
-        alert("Bienvenido");
         window.location='index.html';
     }
     else {
-        alert("Ingrese los datos correctos")
+        email.className += ' is-invalid'
+        password.className += ' is-invalid'
+        mensajee.innerHTML = '<p class="text-danger">Email inválido</p> '
+        mensajep.innerHTML = '<p class="text-danger">Contraseña invalida</p>'
     }
 });

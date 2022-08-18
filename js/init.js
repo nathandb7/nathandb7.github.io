@@ -44,3 +44,8 @@ if (localStorage.getItem("email") == null) {
   alert("debe iniciar sesion");
   window.location.href = "login.html";
 }
+
+logout.addEventListener('click', (e) => {
+  localStorage.clear();
+  window.location = "login.html";
+});
