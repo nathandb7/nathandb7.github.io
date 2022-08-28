@@ -49,3 +49,5 @@ logout.addEventListener('click', (e) => {
   localStorage.clear();
   window.location = "login.html";
 });
+
+document.getElementById('usuario').innerText=localStorage.getItem("email");

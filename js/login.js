@@ -13,7 +13,7 @@ button.addEventListener('click', (e) => {
         password: password.value,
     }
     if (data.email == em && data.password == pa) {
-        localStorage.setItem("email", email);
+        localStorage.setItem("email", data.email);
         window.location='index.html';
     }
     else {
