@@ -189,3 +189,6 @@ a.custom-card:hover {
   color: orange;
 }
 
+.filter {
+  display: none;
+}

@@ -6,13 +6,12 @@ const mensajep = document.getElementById('mensajep');
 
 button.addEventListener('click', (e) => {
     e.preventDefault()
-    const em = "e@mail.com";
-    const pa = 12345;
     const data = {
         email: email.value,
         password: password.value,
     }
-    if (data.email == em && data.password == pa) {
+    if (data.password.length >= 6 && data.email !== '' && 
+    data.password !== '') {
         localStorage.setItem("email", data.email);
         window.location='index.html';
     }
