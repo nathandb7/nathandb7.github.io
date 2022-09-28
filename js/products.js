@@ -11,6 +11,10 @@ let btnPrecioD = document.getElementById('sortDesc');
 let btnRel = document.getElementById('sortByCount');
 let productos = [];
 
+function setProd(ProdId) {
+    localStorage.setItem('prodID',ProdId);
+    window.location = "product-info.html"
+}
 
 const d = document;
 function buscarProducto(input, selector) {
@@ -20,9 +24,9 @@ function buscarProducto(input, selector) {
 
             d.querySelectorAll(selector).forEach(el =>
                 el.textContent.toLowerCase().includes(e.target.value)
-                ? el.classList.remove("filter")
-                : el.classList.add("filter")
-                );
+                    ? el.classList.remove("filter")
+                    : el.classList.add("filter")
+            );
         }
     });
 }
@@ -34,7 +38,7 @@ document.addEventListener("DOMContentLoaded", function () {
         let filtro = filtrarProducto(productos);
         for (let product of filtro) {
             divListaProductos.innerHTML += `
-        <div class="list-group-item list-group-item-action producto">
+        <div onclick="setProd(${product.id})" class="list-group-item list-group-item-action producto">
             <div class="row">
                 <div class="col-3">
                     <img src="${product.image}" class="img-thumbnail">
@@ -136,5 +140,5 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 btnlimpiar.addEventListener('click', function () {
-    window.location='products.html';
+    window.location = 'products.html';
 });

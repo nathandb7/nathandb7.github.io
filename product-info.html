@@ -10,6 +10,7 @@
   <link href="css/font-awesome.min.css" rel="stylesheet">
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <link href="css/styles.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/product-info.css">
 </head>
 
 <body>
@@ -22,7 +23,7 @@
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav w-100 justify-content-between">
           <li class="nav-item">
-            <a class="nav-link" href="index.html">Inicio</a>
+            <a class="nav-link active" href="index.html">Inicio</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="categories.html">Categorías</a>
@@ -42,20 +43,102 @@
       </div>
     </div>
   </nav>
-  <main>
-    <div class="container">
-      <div class="alert alert-danger text-center" role="alert">
-        <h4 class="alert-heading">Funcionalidad en desarrollo</h4>
+  <main role="main">
+    <div class="container mt-5">
+      <div class="text-center p-4">
+        <h2>Descripción del producto</h2>
+        <p class="lead">Encontrarás aquí toda la información del producto seleccionado.</p>
+      </div>
+      <h3 id="productName"></h3>
+      <hr class="my-3">
+      <section id="product-info-section">
+
+        <div id="product-images-carousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="1000">
+          <div class="carousel-indicators">
+          </div>
+          <div class="carousel-inner">
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#product-images-carousel"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#product-images-carousel"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+
+        <dl>
+          <dt>Descripción</dt>
+          <dd>
+            <p id="productDescription"></p>
+          </dd>
+
+          <dt>Precio</dt>
+          <dd>
+            <p id="productCost"></p>
+          </dd>
+
+          <dt>Vendidos</dt>
+          <dd>
+            <p id="productSoldCount"></p>
+          </dd>
+
+
+        </dl>
+      </section>
+
+      <b>Productos relacionados</b>
+      <div class="row text-center text-lg-left pt-2" id="related-products-gallery"></div>
+
+      <a type="button" class="btn btn-light btn-lg btn-block" href="products.html">Ver productos</a>
+
+      <form class="needs-validation" id="comment-form">
+        <h2>Publica tu comentario</h2>
+        <div class="row">
+          <div class="col-md-6 mb-3">
+            <label for="user-name">Nombre</label>
+            <input type="text" class="form-control" name="user-name" placeholder="" value="">
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-12 mb-3">
+            <label for="comment-content">Contenido</label>
+            <textarea class="form-control" name="comment-content" rows="3"></textarea>
+          </div>
+        </div>
+
+        <p id="user-stars-title">Puntaje</p>
+        <div id="user-review-stars">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+        </div>
+
+        <hr class="mb-4">
+        <button class="btn btn-primary" type="submit">Publicar</button>
+      </form>
+
+      <div class="row" id="comments-container">
+        <h2>Comentarios</h2>
+        <div class="list-group" id="comment-list">
+
+        </div>
       </div>
     </div>
   </main>
+
   <footer class="text-muted">
     <div class="container">
-      <p class="float-end">
+      <p class="float-right">
         <a href="#">Volver arriba</a>
       </p>
-      <p>Este sitio forma parte de <a href="https://jovenesaprogramar.edu.uy/" target="_blank">Jovenes a Programar</a> -
-        2022</p>
+      <p>Este sitio forma parte de Desarrollo Web - JAP - 2020</p>
       <p>Clickea <a target="_blank" href="Letra.pdf">aquí</a> para descargar la letra del obligatorio.</p>
     </div>
   </footer>
@@ -67,9 +150,9 @@
       <div></div>
     </div>
   </div>
-  <script src="js/bootstrap.bundle.min.js"></script>
   <script src="js/init.js"></script>
   <script src="js/product-info.js"></script>
+  <script src="js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>

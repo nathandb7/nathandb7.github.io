@@ -41,13 +41,13 @@ let getJSONData = function(url){
 }
 
 if (localStorage.getItem("email") == null) {
-  alert("debe iniciar sesion");
-  window.location.href = "login.html";
+alert("debe iniciar sesion");
+window.location.href = "login.html";
 }
 
 logout.addEventListener('click', (e) => {
-  localStorage.clear();
-  window.location = "login.html";
+localStorage.clear();
+window.location = "login.html";
 });
 
 document.getElementById('usuario').innerText=localStorage.getItem("email");
