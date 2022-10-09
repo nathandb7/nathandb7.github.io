@@ -5,7 +5,7 @@ const comenturl = `https://japceibal.github.io/emercado-api/products_comments/${
 
 let selectedScore = 0;
 
-var category = {};
+let category = {};
 
 let fetchedComments = [];
 
@@ -24,7 +24,8 @@ const productNameHTML = s('#productName'),
     relatedProductsGallery = s('#related-products-gallery'),
     productimagescarousel = s('#product-images-carousel'),
     carouselIndicators = s('#product-images-carousel .carousel-indicators'),
-    carouselImages = s('#product-images-carousel .carousel-inner');
+    carouselImages = s('#product-images-carousel .carousel-inner'),
+    comprar = s('#comprar');
 
 const commentList = s('#comment-list'),
     commentForm = s('#comment-form'),
@@ -199,6 +200,21 @@ document.addEventListener("DOMContentLoaded", function () {
             productSoldCountHTML.innerHTML = datos.soldCount;
             relatedProducts(datos.relatedProducts);
             showImagesGallery(datos.images);
+
+            comprar.addEventListener("click", (e) => {
+                e.preventDefault();
+            
+                const newProduct = {
+                    count: 1,
+                    currency: datos.currency,
+                    id: datos.id,
+                    image: datos.images[0],
+                    name: datos.name,
+                    unitCost: datos.cost,
+                };
+                storeCarrito(newProduct);
+            });
+            
         });
 
     fetch(comenturl)
@@ -222,4 +238,28 @@ document.addEventListener("DOMContentLoaded", function () {
             relatedProductsGallery.innerHTML = relatedhtml;
         }
     }
+
+
+// comprar //
+function getCarritoPrducts() {
+    const array = JSON.parse(localStorage.getItem('product'))?.array || [];
+    array.forEach((product, idx) => (product.id = idx));
+
+    return array;
+}
+
+function storeCarrito(product) {
+    storedCarrito = getCarritoPrducts();
+
+    const newData = {
+        array: storedCarrito.concat({ ...product}),
+    };
+
+    localStorage.setItem('product', JSON.stringify(newData));
+}
+
+
+
+
+// comprar fin //
 });

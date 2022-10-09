@@ -50,4 +50,4 @@ localStorage.clear();
 window.location = "login.html";
 });
 
-document.getElementById('usuario').innerText=localStorage.getItem("email");
+document.getElementById('navbarDarkDropdownMenuLink').innerText=localStorage.getItem("email");
