@@ -211,3 +211,8 @@ a.custom-card:hover {
   outline: none !important;
   border-radius: 10%;
 }
+
+.img_perfil {
+  width: 100px;
+  height: 100px;
+}
