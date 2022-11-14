@@ -203,7 +203,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
             comprar.addEventListener("click", (e) => {
                 e.preventDefault();
-            
+
                 const newProduct = {
                     count: 1,
                     currency: datos.currency,
@@ -213,8 +213,10 @@ document.addEventListener("DOMContentLoaded", function () {
                     unitCost: datos.cost,
                 };
                 storeCarrito(newProduct);
+
+                window.location.href = "cart.html";
             });
-            
+
         });
 
     fetch(comenturl)
@@ -240,26 +242,25 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
 
-// comprar //
-function getCarritoPrducts() {
-    const array = JSON.parse(localStorage.getItem('product'))?.array || [];
-    array.forEach((product, idx) => (product.id = idx));
+    // comprar //
+    function getCarritoPrducts() {
+        const array = JSON.parse(localStorage.getItem('product'))?.array || [];
 
-    return array;
-}
+        return array;
+    }
 
-function storeCarrito(product) {
-    storedCarrito = getCarritoPrducts();
+    function storeCarrito(product) {
+        storedCarrito = getCarritoPrducts();
 
-    const newData = {
-        array: storedCarrito.concat({ ...product}),
-    };
+        const newData = {
+            array: storedCarrito.concat({ ...product }),
+        };
 
-    localStorage.setItem('product', JSON.stringify(newData));
-}
-
+        localStorage.setItem('product', JSON.stringify(newData));
+    }
 
 
 
-// comprar fin //
+
+    // comprar fin //
 });

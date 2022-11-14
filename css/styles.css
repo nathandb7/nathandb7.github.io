@@ -192,3 +192,22 @@ a.custom-card:hover {
 .filter {
   display: none;
 }
+
+.delete-product {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 6%;
+  bottom: 50%;
+  height: 35px;
+  width: 35px;
+  background: white;
+  border: 1px solid #c0392b;
+  text-align: center;
+  transition: all 200ms cubic-bezier(0.18, 0.89, 0.4, 1.64);
+  padding: 0 7px;
+  color: #c0392b;
+  outline: none !important;
+  border-radius: 10%;
+}
