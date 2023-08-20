@@ -73,7 +73,7 @@
 
       <div>
         <h2>Tipo de envío</h2>
-        <form class="row g-3 needs-validation" novalidate>
+        <form method="post" action="http://localhost:3000/datos.json" class="row g-3 needs-validation" novalidate>
           <div class="radios">
             <div class="form-check">
               <input class="form-check-input" type="radio" name="costoenvio" id="radio15" value="15" checked>
@@ -154,7 +154,7 @@
                   <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                  <form class="needs-validation" novalidate>
+                  <form method="post" action="http://localhost:3000/datos.json" class="needs-validation" novalidate>
                     <div class="form-check">
                       <input class="form-check-input" type="radio" name="formadepago" id="tarjeta" value="tarjeta"
                         required>
