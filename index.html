@@ -10,11 +10,14 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Montserrat:ital,wght@0,300;0,400;0,600;0,800;1,800&display=swap"
         rel="stylesheet">
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.0.0/uicons-brands/css/uicons-brands.css'>
+    <link rel='stylesheet'
+        href='https://cdn-uicons.flaticon.com/2.0.0/uicons-regular-straight/css/uicons-regular-straight.css'>
     <link rel="stylesheet" href="css/index.css">
 </head>
 
 <body>
-    <header class="flex">
+    <header class="flex" id="inicio">
         <img src="img/foto-cv.jpg" alt="foto perfil cv">
         <div>
             <h1>Nathan de Barros</h1>
@@ -23,13 +26,14 @@
     </header>
     <div class="nav-bg">
         <nav class="nav-principal contenedor">
-            <a href="#">Inicio</a>
-            <a href="#">Sobre Mí</a>
-            <a href="#">Proyectos</a>
-            <a href="#">Contactos</a>
+            <a href="#sobre-mi">Sobre Mí</a>
+            <a href="#proyectos">Proyectos</a>
+            <a href="#educacion">Educación</a>
+            <a href="#experiencia">Experiencia</a>
+            <a href="#contactos">Contactos</a>
         </nav>
     </div>
-    <section class="sobre-mi">
+    <section class="sobre-mi" id="sobre-mi">
         <h2>Sobre Mí</h2>
         <div class="flex centrar">
             <img src="img/dev.png" alt="desarrollador web">
@@ -48,36 +52,48 @@
         </div>
     </section>
 
-    <section class="proyectos">
+    <section class="proyectos" id="proyectos">
         <h2>Proyectos</h2>
         <div class="grid">
-            <div class="contenedor sombra">
-                <h3>App - Seguimiento Pacientes Veterinaria</h3>
-                <img class="w-sm-100" src="img/citas.png" alt="Seguimiento Pacientes Veterinaria">
+            <div class="contenedor sombra animar">
+                <a href="https://app-pacientes-vet.netlify.app/">
+                    <h3>App - Seguimiento Pacientes Veterinaria</h3>
+                    <img class="w-sm-100" src="img/citas.png" alt="Seguimiento Pacientes Veterinaria">
+                </a>
             </div>
-            <div class="contenedor sombra">
-                <h3>App - Cotización de criptomonedas</h3>
-                <img class="w-sm-100" src="img/criptos.png" alt="Cotización de criptomonedas">
+            <div class="contenedor sombra animar">
+                <a href="https://cripto-react-nath.netlify.app/">
+                    <h3>App - Cotización de criptomonedas</h3>
+                    <img class="w-sm-100" src="img/criptos.png" alt="Cotización de criptomonedas">
+                </a>
             </div>
-            <div class="contenedor sombra">
-                <h3>Web - Promoción de evento</h3>
-                <img class="w-sm-100" src="img/festival.png" alt="Promoción de evento">
+            <div class="contenedor sombra animar">
+                <a href="https://web-eventos-1.netlify.app/">
+                    <h3>Web - Promoción de evento</h3>
+                    <img class="w-sm-100" src="img/festival.png" alt="Promoción de evento">
+                </a>
             </div>
-            <div class="contenedor sombra">
-                <h3>App - Control de Gastos</h3>
-                <img class="w-sm-100" src="img/gastos.png" alt="Control de Gastos">
+            <div class="contenedor sombra animar">
+                <a href="https://control-presupuesto-nath.netlify.app/">
+                    <h3>App - Control de Gastos</h3>
+                    <img class="w-sm-100" src="img/gastos.png" alt="Control de Gastos">
+                </a>
             </div>
-            <div class="contenedor sombra">
-                <h3>Web - Blog Neozix</h3>
-                <img class="w-sm-100" src="img/blog.png" alt="Blog Neozix">
+            <div class="contenedor sombra animar">
+                <a href="https://neozix.com/">
+                    <h3>Web - Blog Neozix</h3>
+                    <img class="w-sm-100" src="img/blog.png" alt="Blog Neozix">
+                </a>
             </div>
-            <div class="contenedor sombra">
-                <h3>Web - Nimbus</h3>
-                <img class="w-sm-100" src="img/nimbus.png" alt="Nimbus">
+            <div class="contenedor sombra animar">
+                <a href="https://nimbussinlimites.com/">
+                    <h3>Web - Nimbus</h3>
+                    <img class="w-sm-100" src="img/nimbus.png" alt="Nimbus">
+                </a>
             </div>
     </section>
 
-    <section class="educacion">
+    <section class="educacion" id="educacion">
         <h2>Educación</h2>
         <div class="grid">
             <div class="contenedor sombra">
@@ -117,7 +133,7 @@
         </div>
     </section>
 
-    <section class="experiencia">
+    <section class="experiencia" id="experiencia">
         <h2>Experiencia Laboral</h2>
         <div class="grid">
             <div class="contenedor sombra">
@@ -137,6 +153,20 @@
             </div>
         </div>
     </section>
+
+    <section class="contacto" id="contactos">
+        <h2>Contacto</h2>
+        <ul class="flex centrar">
+            <li><i class="fi fi-rs-phone-call icono"></i>098224793</li>
+            <li><i class="fi fi-rs-envelope icono"></i></i>nathandb7@gmail.com</li>
+            <li><i class="fi fi-rs-site-alt icono"></i><a href="https://nathandb7.github.io/">nathandb7.github.io</a>
+            </li>
+            <li><i class="fi fi-brands-github icono"></i><a href="https://github.com/nathandb7">github.com/nathandb7</a>
+            </li>
+        </ul>
+    </section>
+
+    <script src="js/script.js"></script>
 </body>
 
 </html>
