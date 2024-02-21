@@ -26,14 +26,22 @@
             </div>
         </div>
     </header>
+    
 
     <!-- Menú de escritorio -->
     <nav class="desktop-menu">
         <ul>
-            <li><a href="#about">Sobre Mí</a></li>
-            <li><a href="#projects">Proyectos</a></li>
-            <li><a href="#contact">Contacto</a></li>
-            <li><a href="#educacion">Educación</a></li>
+            <li><a href="#about" class="a1">Sobre Mí</a></li>
+            <li><a href="#projects" class="a2">Proyectos</a></li>
+            <li><a href="#educacion" class="a3">Educación</a></li>
+            <li><a href="#contact" class="a4">Contacto</a></li>            
+            <li><div class="language-selector">
+                <select id="language">
+                    <option value="es">Español</option>
+                    <option value="en">English</option>
+                </select>
+            </div>
+            </li>
         </ul>
     </nav>
 
@@ -45,26 +53,26 @@
 
         <nav>
             <ul>
-                <li><a href="#about">Sobre Mí</a></li>
-                <li><a href="#projects">Proyectos</a></li>
-                <li><a href="#contact">Contacto</a></li>
-                <li><a href="#educacion">Educación</a></li>
+                <li><a href="#about" class="a1">Sobre Mí</a></li>
+                <li><a href="#projects" class="a2">Proyectos</a></li>
+                <li><a href="#educacion" class="a3">Educación</a></li>
+                <li><a href="#contact" class="a4">Contacto</a></li>                
             </ul>
         </nav>
     </div>
 
 
     <section class="about-me" id="about">
-        <h2>Sobre Mí</h2>
+        <h2 class="about-title">Sobre Mí</h2>
         <div class="about-container">
             <img src="img/dev.png" alt="Desarrollador Web">
             <div>
-                <p>Desarrollador web apasionado con habilidades destacadas en HTML, CSS, JavaScript,
+                <p class="about-description">Desarrollador web apasionado con habilidades destacadas en HTML, CSS, JavaScript,
                     React y PHP. Mi enfoque principal se centra en la creación de experiencias de usuario cautivadoras y
                     funcionales. He contribuido al éxito de proyectos mediante el diseño frontend atractivo y la
                     implementación backend eficiente utilizando PHP y MySQL.
                 </p>
-                <p>Con una actitud proactiva y un compromiso constante con la mejora continua, estoy preparado para
+                <p class="about-description-2">Con una actitud proactiva y un compromiso constante con la mejora continua, estoy preparado para
                     enfrentar desafíos y aportar soluciones innovadoras. Mi habilidad para adaptarme a nuevas
                     tecnologías y
                     mi enfoque en mantenerme actualizado con las últimas tendencias me posicionan como un profesional
@@ -74,13 +82,13 @@
     </section>
 
     <section class="projects" id="projects">
-        <h2>Proyectos Destacados</h2>
+        <h2 class="projects-title">Proyectos Destacados</h2>
         <div class="container">
 
             <div class="project">
                 <img src="img/citas.png" alt="Proyecto 1">
                 <h3>App - Seguimiento Pacientes Veterinaria</h3>
-                <p></p>
+                <p>Proyecto con React, Vite, Tailwind CSS, LocalStorage</p>
                 <a href="https://github.com/nathandb7/citas-react">Ver Codigo</a>
                 <a href="https://app-pacientes-vet.netlify.app/">Ver Proyecto</a>
             </div>
@@ -88,6 +96,7 @@
             <div class="project">
                 <img src="img/criptos.png" alt="Proyecto 2">
                 <h3>App - Cotización de criptomonedas</h3>
+                <p>Proyecto con React, Vite, Styled Components, Custom Hooks</p>
                 <a href="https://github.com/nathandb7/criptos-react">Ver Codigo</a>
                 <a href="https://cripto-react-nath.netlify.app/">Ver Proyecto</a>
             </div>
@@ -103,7 +112,7 @@
             <div class="project">
                 <img src="img/gastos.png" alt="Proyecto 4">
                 <h3>App - Control de Gastos</h3>
-                <p></p>
+                <p>Proyecto con React, Vite, LocalStorage</p>
                 <a href="https://github.com/nathandb7/control-gastos-react">Ver Codigo</a>
                 <a href="https://control-presupuesto-nath.netlify.app/">Ver Proyecto</a>
             </div>
@@ -126,14 +135,14 @@
             <div class="project">
                 <img src="img/nimbus.png" alt="Proyecto 5">
                 <h3>Sitio Web - Nimbus</h3>
-                <p></p>
+                <p>Proyecto con Wordpress</p>
                 <a href="https://nimbussinlimites.com/">Ver Proyecto</a>
             </div>
 
             <div class="project">
                 <img src="img/blog.png" alt="Proyecto 6">
                 <h3>Sitio Web - Blog Neozix</h3>
-                <p></p>
+                <p>Proyecto con Wordpress</p>
                 <a href="https://neozix.com/">Ver Proyecto</a>
             </div>
 
@@ -152,8 +161,8 @@
             </div>
             <div class="education-container shadow">
                 <h3>Código Con Juan - Udemy</h3>
-                <p>Desarrollo Web Completo con HTML5, CSS3, JS AJAX
-                    PHP y MySQL</p>
+                <p>Full Stack Developer with HTML5, CSS3, JS AJAX
+                    PHP and MySQL</p>
                 <p>2023</p>
             </div>
             <div class="education-container shadow">
@@ -163,7 +172,7 @@
             </div>
             <div class="education-container shadow">
                 <h3>Ceibal - Jóvenes a Programar</h3>
-                <p>Desarrollo Web</p>
+                <p>Web Development HTML, JS, CSS</p>
                 <p>2023</p>
             </div>
             <div class="education-container shadow">
@@ -174,7 +183,7 @@
             <div class="education-container shadow">
                 <h3>Instituto de Economía Internacional de la
                     Universitat d’Alacant (UA)</h3>
-                <p>Desarrollo Web HTML, CSS3</p>
+                <p>Web Development HTML, CSS3</p>
                 <p>2016</p>
             </div>
         </div>
@@ -194,11 +203,12 @@
 
     <footer>
         <div>
-            <p>&copy; 2024 Nathan de Barros. Todos los derechos reservados.</p>
+            <p>© 2024 Nathan de Barros. Todos los derechos reservados.</p>
         </div>
     </footer>
 
     <script src="js/script.js"></script>
+    <script src="js/translation.js" defer></script>
 </body>
 
 </html>
