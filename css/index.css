@@ -255,6 +255,7 @@ nav a:hover {
     }
 
     .mobile-menu {
+        background-color: #333;
         display: block;
         /* Muestra el menú acordeón en dispositivos móviles */
         text-align: right;
@@ -320,6 +321,7 @@ nav a:hover {
 
     .container {
         grid-template-columns: repeat(2, 1fr);
+        margin-top: 20px;
     }
 
     .contact-list {
@@ -347,4 +349,61 @@ nav a:hover {
     border-radius: 50%;
     margin: 0;
     padding: 0;
+}
+
+/* Estilo para el contenedor del selector de idioma */
+.language-selector {
+    padding: 8px; /* Ajusta el padding según sea necesario */
+    font-size: 16px; /* Ajusta el tamaño de fuente según sea necesario */
+    font-weight: bold; /* Ajusta el peso de la fuente según sea necesario */
+    border: 1px solid #333; /* Borde del selector */
+    border-radius: 5px; /* Bordes redondeados */
+    background-color: #5c5c5c; /* Color de fondo del selector */
+    color: #fff; /* Color del texto */
+    cursor: pointer; /* Cambiar el cursor al pasar sobre el selector */
+    transition: background-color 0.3s ease, color 0.3s ease, border 0.3s ease; /* Efecto de transición */
+}
+
+.language-selector:hover,
+.language-selector:focus {
+    background-color: #61dafb; /* Cambia el color de fondo al pasar o al estar enfocado */
+    color: #333; /* Cambia el color del texto al pasar o al estar enfocado */
+    border-color: #61dafb; /* Cambia el color del borde al pasar o al estar enfocado */
+}
+
+/* Elimina estilos predeterminados del navegador para el selector */
+.language-selector select {
+    border: none; /* Elimina el borde predeterminado del selector */
+    background: transparent; /* Hace el fondo transparente para que el contenedor maneje el color de fondo */
+    width: 100%; /* Ocupa el ancho completo del contenedor */
+    color: #fff; /* Color del texto */
+    cursor: pointer; /* Cambiar el cursor al pasar sobre el selector */    
+    font-size: 14px; /* Ajusta el tamaño de fuente del selector */
+    font-weight: bold; /* Ajusta el peso de la fuente del selector */
+}
+
+.language-selector select:hover {
+ color: #616161;
+}
+
+
+/* Ajustes para alinear el selector de idioma con los demás elementos del menú */
+.desktop-menu ul {
+    display: flex;
+    align-items: center;
+}
+
+/* Estilos para el selector de idioma en dispositivos móviles */
+@media only screen and (max-width: 600px) {
+    .mobile-menu .language-selector {
+        text-align: center;
+        margin: 0 auto;
+        padding: 10px;
+        width: 80%; /* Ajusta el ancho según sea necesario */
+    }
+
+    .mobile-menu .language-selector select {
+        width: 100%;
+        font-size: 14px;
+    }
 }
