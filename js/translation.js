@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', function () {
             document.querySelector('.about-description-2').textContent = 'With a proactive attitude and a constant commitment to continuous improvement, I am ready to face challenges and provide innovative solutions. My ability to adapt to new technologies and my focus on keeping up to date with the latest trends position me as a versatile and results-oriented professional.';
             document.querySelector('.projects-title').textContent = 'Featured Projects';
 
-            let [p1, p2, p3, p4, p5, p6, p7, p8] = document.querySelectorAll('.project p');
+            let [p1, p2, p3, p4, p5, p6, p7, p8, p9] = document.querySelectorAll('.project p');
             p1.textContent = 'Project with React, Vite, Tailwind CSS, LocalStorage';
             p2.textContent = 'Project with React, Vite, Styled Components, Custom Hooks';
             p3.textContent = 'Project with HTML, SASS and Gulp';
@@ -42,9 +42,10 @@ document.addEventListener('DOMContentLoaded', function () {
             p6.textContent = 'Project with HTML, CSS';
             p7.textContent = 'Wordpress project';
             p8.textContent = 'Wordpress project';
+            p9.textContent = 'Project with JS, Node, Express and mongoDB';
 
             // Selecciona los elementos h3 dentro de la clase .project
-            let [h3_1, h3_2, h3_3, h3_4, h3_5, h3_6, h3_7, h3_8] = document.querySelectorAll('.project h3');
+            let [h3_1, h3_2, h3_3, h3_4, h3_5, h3_6, h3_7, h3_8, h3_9] = document.querySelectorAll('.project h3');
 
             // Establece el contenido de los elementos h3 a una cadena vacía
             h3_1.textContent = 'App - Veterinary Patient Monitoring';
@@ -55,6 +56,7 @@ document.addEventListener('DOMContentLoaded', function () {
             h3_6.textContent = 'Website - Frond End Store';
             h3_7.textContent = 'Website - Nimbus';
             h3_8.textContent = 'Website - Neozix';
+            h3_9.textContent = 'App - Live Chat JavaScript';
 
             // Selecciona los enlaces dentro de la clase .project
             let enlacesCodigo = document.querySelectorAll('.project a');
