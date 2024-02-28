@@ -88,6 +88,8 @@ header h1 {
 }
 
 .project img {
+    width: 320px;
+    height: 200px;
     max-width: 100%;
     border-radius: 8px;
     transition: transform 0.3s ease;
@@ -107,10 +109,21 @@ header h1 {
     text-decoration: none;
     border-radius: 5px;
     transition: background-color 0.3s ease;
+    font-weight: bold;
+}
+
+.project .code {
+    background-color: #ff8e1e;
+    color: #4d2701;
+}
+
+.project .code:hover {
+    background-color: #dd7004;
+    color: #fff;
 }
 
 .project a:hover {
-    background-color: #4fa3d1;
+    background-color: #3992c2;
     color: #fff;
     /* Cambia el color al pasar el ratón */
 }
