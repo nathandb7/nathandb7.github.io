@@ -9,6 +9,22 @@ body {
     /* Color de texto */
 }
 
+h1,
+h2,
+h3,
+h4 {
+    font-family: "Anta", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.items-center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
 .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -19,18 +35,36 @@ body {
     gap: 20px;
 }
 
-header {
-    background-color: #333;
+.hero {
+    height: 500px;
+    background-image: url("../img/hero.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     padding: 50px 0 20px 0;
+    position: relative;
 }
 
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Ajusta la opacidad según lo oscuro que quieras que sea el efecto */
+}
 
-header h1 {
-    margin: 0;
+.hero-text {
     text-align: center;
-    /* Alineación centrada */
-    line-height: 1.5;
-    /* Ajustar el espacio entre líneas para centrar verticalmente */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    z-index: 1;
+    /* Asegura que el texto esté encima del pseudo-elemento oscurecedor */
 }
 
 .about-me {
@@ -38,7 +72,7 @@ header h1 {
     margin: 0 auto;
     /* Centrar el contenedor */
     text-align: center;
-    /* Alinear el texto al centro */
+    background-color: #030207;
 }
 
 .about-me h2 {
@@ -68,9 +102,7 @@ header h1 {
 
 .projects {
     padding: 50px 20px;
-    /* Añadir un espacio adicional a los lados del contenedor */
     margin: 0 auto;
-    /* Centrar el contenedor */
 }
 
 .projects h2 {
@@ -79,14 +111,18 @@ header h1 {
 }
 
 .project {
-    background-color: #333;
+    background-color: #0e0e0e;
     padding: 20px;
     border-radius: 8px;
     text-align: center;
     overflow: hidden;
     transition: transform 0.3s ease;
 }
-
+.project:hover {
+    border: 1px solid #9e0b12;
+    transform: scale(1.08);
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+}
 .project img {
     width: 320px;
     height: 200px;
@@ -101,35 +137,37 @@ header h1 {
 
 .project a {
     display: inline-block;
-    background-color: #61dafb;
+    background-color: #da1d25;
     /* Color de enlace */
-    color: #033550;
+    color: #fff;
     padding: 10px 20px;
-    margin: 3px;
+    margin: 10px 3px 3px 3px;
     text-decoration: none;
     border-radius: 5px;
     transition: background-color 0.3s ease;
     font-weight: bold;
+    transition: transform 0.2s ease;
 }
 
 .project .code {
-    background-color: #ff8e1e;
-    color: #4d2701;
+    background-color: #030207;
+    color: #fff;
 }
 
 .project .code:hover {
-    background-color: #dd7004;
-    color: #fff;
+    background-color: #fff;
+    color: #da1d25;
+    transform: scale(1.08);
 }
 
 .project a:hover {
-    background-color: #3992c2;
-    color: #fff;
-    /* Cambia el color al pasar el ratón */
+    background-color: #fff;
+    color: #da1d25;
+    transform: scale(1.08);
 }
 
 footer {
-    background-color: #333;
+    background-color: #da1d25;
     padding: 20px 0;
     text-align: center;
 }
@@ -153,11 +191,15 @@ footer p {
 }
 
 .contact a {
+    text-decoration: none;
     color: #fff;
+    transition: color 0.8s ease;
+    transition: font-size 0.5s ease;
 }
 
 .contact a:hover {
-    color: #61dafb;
+    color: #da1d25;
+    font-size: 18px;
 }
 
 .contact-list {
@@ -178,7 +220,9 @@ footer p {
 }
 
 /* Educacion */
-.educacion {
+.educacion {    
+    max-width: 1500px;
+    margin: 0 auto;
     padding: 50px 0;
     text-align: center;
 }
@@ -195,7 +239,7 @@ footer p {
 }
 
 .education-container {
-    background-color: #333;
+    background-color: #0e0e0e;
     padding: 20px;
     border-radius: 8px;
     text-align: center;
@@ -216,6 +260,7 @@ footer p {
 }
 
 .education-container:hover {
+    border: 1px solid #9e0b12;
     transform: scale(1.05);
 }
 
@@ -226,7 +271,7 @@ nav {
     top: 0;
     left: 0;
     width: 100%;
-    background-color: #333;
+    background-color: #191918;
     /* Color de fondo del menú */
     padding: 10px 0;
     z-index: 1000;
@@ -256,7 +301,7 @@ nav a {
 }
 
 nav a:hover {
-    color: #61dafb;
+    color: #da1d25;
     /* Color del texto al hacer hover */
 }
 
@@ -269,7 +314,7 @@ nav a:hover {
     }
 
     .mobile-menu {
-        background-color: #333;
+        background-color: #191918;
         display: block;
         /* Muestra el menú acordeón en dispositivos móviles */
         text-align: right;
@@ -294,7 +339,7 @@ nav a:hover {
         padding: 10px 0;
         box-sizing: border-box;
         margin-top: 57px;
-        background-color: #333;
+        background-color: #191918;
     }
 
     nav ul {
@@ -319,7 +364,7 @@ nav a:hover {
     }
 
     nav a:hover {
-        background-color: #61dafb;
+        background-color: #da1d25;
     }
 
     /* Muestra el menú acordeón cuando el ícono se hace clic */
@@ -367,37 +412,54 @@ nav a:hover {
 
 /* Estilo para el contenedor del selector de idioma */
 .language-selector {
-    padding: 8px; /* Ajusta el padding según sea necesario */
-    font-size: 16px; /* Ajusta el tamaño de fuente según sea necesario */
-    font-weight: bold; /* Ajusta el peso de la fuente según sea necesario */
-    border: 1px solid #333; /* Borde del selector */
-    border-radius: 5px; /* Bordes redondeados */
-    background-color: #5c5c5c; /* Color de fondo del selector */
-    color: #fff; /* Color del texto */
-    cursor: pointer; /* Cambiar el cursor al pasar sobre el selector */
-    transition: background-color 0.3s ease, color 0.3s ease, border 0.3s ease; /* Efecto de transición */
+    padding: 8px;
+    /* Ajusta el padding según sea necesario */
+    font-size: 16px;
+    /* Ajusta el tamaño de fuente según sea necesario */
+    font-weight: bold;
+    /* Ajusta el peso de la fuente según sea necesario */
+    border: 1px solid #191918;
+    /* Borde del selector */
+    border-radius: 5px;
+    /* Bordes redondeados */
+    background-color: #2c2c2a;
+    /* Color de fondo del selector */
+    color: #fff;
+    /* Color del texto */
+    cursor: pointer;
+    /* Cambiar el cursor al pasar sobre el selector */
+    transition: background-color 0.3s ease, color 0.3s ease, border 0.3s ease;
+    /* Efecto de transición */
 }
 
 .language-selector:hover,
 .language-selector:focus {
-    background-color: #61dafb; /* Cambia el color de fondo al pasar o al estar enfocado */
-    color: #333; /* Cambia el color del texto al pasar o al estar enfocado */
-    border-color: #61dafb; /* Cambia el color del borde al pasar o al estar enfocado */
+    background-color: #330406;
+    color: #fff;
+    border-color: #da1d25;
 }
 
 /* Elimina estilos predeterminados del navegador para el selector */
 .language-selector select {
-    border: none; /* Elimina el borde predeterminado del selector */
-    background: transparent; /* Hace el fondo transparente para que el contenedor maneje el color de fondo */
-    width: 100%; /* Ocupa el ancho completo del contenedor */
-    color: #fff; /* Color del texto */
-    cursor: pointer; /* Cambiar el cursor al pasar sobre el selector */    
-    font-size: 14px; /* Ajusta el tamaño de fuente del selector */
-    font-weight: bold; /* Ajusta el peso de la fuente del selector */
+    border: none;
+    /* Elimina el borde predeterminado del selector */
+    background: transparent;
+    /* Hace el fondo transparente para que el contenedor maneje el color de fondo */
+    width: 100%;
+    /* Ocupa el ancho completo del contenedor */
+    color: #fff;
+    /* Color del texto */
+    cursor: pointer;
+    /* Cambiar el cursor al pasar sobre el selector */
+    font-size: 14px;
+    /* Ajusta el tamaño de fuente del selector */
+    font-weight: bold;
+    /* Ajusta el peso de la fuente del selector */
 }
 
 .language-selector select:hover {
- color: #616161;
+    background-color: #330406;
+    color: #fff;
 }
 
 
@@ -413,7 +475,8 @@ nav a:hover {
         text-align: center;
         margin: 0 auto;
         padding: 10px;
-        width: 80%; /* Ajusta el ancho según sea necesario */
+        width: 80%;
+        /* Ajusta el ancho según sea necesario */
     }
 
     .mobile-menu .language-selector select {

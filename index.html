@@ -10,6 +10,7 @@
         href='https://cdn-uicons.flaticon.com/2.0.0/uicons-regular-straight/css/uicons-regular-straight.css'>
     <link rel='stylesheet'
         href='https://cdn-uicons.flaticon.com/2.1.0/uicons-regular-rounded/css/uicons-regular-rounded.css'>
+    <link rel="stylesheet" href="css/animaciones.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
@@ -17,7 +18,10 @@
     <meta name="keywords" content="desarrollador web, HTML, CSS, JavaScript, React, PHP, MySQL, portfolio">
     <meta name="author" content="Nathan de Barros">
     <link rel="icon" href="/favicon.ico" type="image/x-icon">
-    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anta&display=swap" rel="stylesheet">
+
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-FRP85NM511"></script>
     <script>
@@ -31,15 +35,16 @@
 </head>
 
 <body>
+    <div class="bolita"></div>
+    <div class="bolita"></div>
+    <div class="bolita"></div>
+    <!-- Agrega tantas bolitas como quieras -->
 
     <header>
-        <div class="container">
-            <div>
-                <img src="img/foto-cv.jpg" alt="foto perfil" class="foto">
-            </div>
-            <div>
-                <h1>Nathan de Barros</h1>
-                <p class="dev">Web Developer: HTML, CSS, JS, React, PHP, MySql</p>
+        <div class="hero">
+            <div class="hero-text">
+                <h1 class="animacion">Nathan de Barros</h1>
+                <p class="dev animacion5s">Web Developer: HTML, CSS, JS, React, PHP, MySql</p>
             </div>
         </div>
     </header>
@@ -86,8 +91,6 @@
             </ul>
         </nav>
     </div>
-
-
     <section class="about-me" id="about">
         <h2 class="about-title">Sobre Mí</h2>
         <div class="about-container">
@@ -185,42 +188,44 @@
         </div>
     </section>
 
-    <section class="educacion" id="educacion">
-        <h2>Educación</h2>
-        <div class="education-grid">
-            <div class="education-container shadow">
-                <h3>Board Infinity</h3>
-                <p>Frontend Development using React
-                    .NET FullStack Developer Specialization
-                </p>
-                <p>2023</p>
-            </div>
-            <div class="education-container shadow">
-                <h3>Código Con Juan - Udemy</h3>
-                <p>Full Stack Developer with HTML5, CSS3, JS AJAX
-                    PHP and MySQL</p>
-                <p>2023</p>
-            </div>
-            <div class="education-container shadow">
-                <h3>Código Con Juan - Udemy</h3>
-                <p>React - Full Stack</p>
-                <p>2023</p>
-            </div>
-            <div class="education-container shadow">
-                <h3>Ceibal - Jóvenes a Programar</h3>
-                <p>Web Development HTML, JS, CSS</p>
-                <p>2023</p>
-            </div>
-            <div class="education-container shadow">
-                <h3>Microsoft - INEFOP</h3>
-                <p>HTML & Office</p>
-                <p>2021</p>
-            </div>
-            <div class="education-container shadow">
-                <h3>Instituto de Economía Internacional de la
-                    Universitat d’Alacant (UA)</h3>
-                <p>Web Development HTML, CSS3</p>
-                <p>2016</p>
+    <section id="educacion" style="background-color: #030207;">
+        <div class="educacion">
+            <h2>Educación</h2>
+            <div class="education-grid">
+                <div class="education-container shadow">
+                    <h3>Board Infinity</h3>
+                    <p>Frontend Development using React
+                        .NET FullStack Developer Specialization
+                    </p>
+                    <p>2023</p>
+                </div>
+                <div class="education-container shadow">
+                    <h3>Código Con Juan - Udemy</h3>
+                    <p>Full Stack Developer with HTML5, CSS3, JS AJAX
+                        PHP and MySQL</p>
+                    <p>2023</p>
+                </div>
+                <div class="education-container shadow">
+                    <h3>Código Con Juan - Udemy</h3>
+                    <p>React - Full Stack</p>
+                    <p>2023</p>
+                </div>
+                <div class="education-container shadow">
+                    <h3>Ceibal - Jóvenes a Programar</h3>
+                    <p>Web Development HTML, JS, CSS</p>
+                    <p>2023</p>
+                </div>
+                <div class="education-container shadow">
+                    <h3>Microsoft - INEFOP</h3>
+                    <p>HTML & Office</p>
+                    <p>2021</p>
+                </div>
+                <div class="education-container shadow">
+                    <h3>Instituto de Economía Internacional de la
+                        Universitat d’Alacant (UA)</h3>
+                    <p>Web Development HTML, CSS3</p>
+                    <p>2016</p>
+                </div>
             </div>
         </div>
     </section>
@@ -229,24 +234,20 @@
         <h2>Contacto</h2>
         <ul class="contact-list">
             <li>
-                <i class="fi fi-rs-phone-call icono"></i>
-                <a href="tel:+59898221793">(+598) 98 221 793</a>
+                <a href="tel:+59898221793"><i class="fi fi-rs-phone-call icono"></i> (+598) 98 221 793</a>
+            </li>
+            <li>                
+                <a href="mailto:nathandb7@gmail.com"><i class="fi fi-rs-envelope icono"></i> nathandb7@gmail.com</a>
             </li>
             <li>
-                <i class="fi fi-rs-envelope icono"></i>
-                <a href="mailto:nathandb7@gmail.com">nathandb7@gmail.com</a>
+                <a href="https://nathandb7.github.io/"><i class="fi fi-rs-site-alt icono"></i> nathandb7.github.io</a>
             </li>
             <li>
-                <i class="fi fi-rs-site-alt icono"></i>
-                <a href="https://nathandb7.github.io/">nathandb7.github.io</a>
-            </li>
-            <li>
-                <i class="fi fi-brands-github icono"></i>
-                <a href="https://github.com/nathandb7">github.com/nathandb7</a>
+                <a href="https://github.com/nathandb7"><i class="fi fi-brands-github icono"></i> github.com/nathandb7</a>
             </li>
         </ul>
     </section>
-    
+
 
     <footer>
         <div>
