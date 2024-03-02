@@ -37,7 +37,7 @@ h4 {
 
 .hero {
     height: 500px;
-    background-image: url("../img/hero.jpg");
+    background-image: url("../img/heroimg.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -484,3 +484,5 @@ nav a:hover {
         font-size: 14px;
     }
 }
+
+/*  */
