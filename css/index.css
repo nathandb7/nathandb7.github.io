@@ -118,11 +118,13 @@ h4 {
     overflow: hidden;
     transition: transform 0.3s ease;
 }
+
 .project:hover {
     border: 1px solid #9e0b12;
     transform: scale(1.08);
-    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
 }
+
 .project img {
     width: 320px;
     height: 200px;
@@ -220,7 +222,7 @@ footer p {
 }
 
 /* Educacion */
-.educacion {    
+.educacion {
     max-width: 1500px;
     margin: 0 auto;
     padding: 50px 0;
@@ -307,7 +309,12 @@ nav a:hover {
 
 
 /* Estilos para pantallas más pequeñas (Mobile) */
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 800px) {
+    .project img {
+        width: auto;
+        height: auto;
+    }
+    
     .desktop-menu {
         display: none;
         /* Oculta el menú de escritorio en dispositivos móviles */
@@ -392,7 +399,7 @@ nav a:hover {
     }
 }
 
-@media only screen and (min-width: 601px) {
+@media only screen and (min-width: 800px) {
     .menu-icon {
         display: none;
     }
@@ -470,7 +477,7 @@ nav a:hover {
 }
 
 /* Estilos para el selector de idioma en dispositivos móviles */
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 800px) {
     .mobile-menu .language-selector {
         text-align: center;
         margin: 0 auto;
@@ -484,5 +491,3 @@ nav a:hover {
         font-size: 14px;
     }
 }
-
-/*  */
