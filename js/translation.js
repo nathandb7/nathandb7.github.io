@@ -33,30 +33,32 @@ document.addEventListener('DOMContentLoaded', function () {
             document.querySelector('.about-description-2').textContent = 'With a proactive attitude and a constant commitment to continuous improvement, I am ready to face challenges and provide innovative solutions. My ability to adapt to new technologies and my focus on keeping up to date with the latest trends position me as a versatile and results-oriented professional.';
             document.querySelector('.projects-title').textContent = 'Featured Projects';
 
-            let [p1, p2, p3, p4, p5, p6, p7, p8, p9] = document.querySelectorAll('.project p');
-            p1.textContent = 'Project with React, Vite, Tailwind CSS, LocalStorage';
-            p2.textContent = 'Project with React, Vite, Styled Components, Custom Hooks';
-            p3.textContent = 'Project with HTML, SASS and Gulp';
-            p4.textContent = 'Project with React, Vite, LocalStorage';
-            p5.textContent = 'Real estate site HTML, SASS, Gulp, PHP, MySql';
-            p6.textContent = 'Project with HTML, CSS';
-            p7.textContent = 'Wordpress project';
-            p8.textContent = 'Wordpress project';
-            p9.textContent = 'Project with JS, Node, Express and mongoDB';
+            let [p1, p2, p3, p4, p5, p6, p7, p8, p9, p10] = document.querySelectorAll('.project p');
+            p1.textContent = 'Project with HTML, JS, Node, Express and mongoDB';
+            p2.textContent = 'Project with HTML, CSS, JS, Bootstrap';
+            p3.textContent = 'Project with React, Vite, Tailwind CSS, LocalStorage';
+            p4.textContent = 'Project with React, Vite, Styled Components, Custom Hooks';
+            p5.textContent = 'Project with HTML, SASS and Gulp';
+            p6.textContent = 'Project with React, Vite, LocalStorage';
+            p7.textContent = 'Real estate site HTML, SASS, Gulp, PHP, MySql';
+            p8.textContent = 'Project with HTML, CSS';
+            p9.textContent = 'Wordpress project';
+            p10.textContent = 'Wordpress project';
 
             // Selecciona los elementos h3 dentro de la clase .project
-            let [h3_1, h3_2, h3_3, h3_4, h3_5, h3_6, h3_7, h3_8, h3_9] = document.querySelectorAll('.project h3');
+            let [h3_1, h3_2, h3_3, h3_4, h3_5, h3_6, h3_7, h3_8, h3_9, h3_10] = document.querySelectorAll('.project h3');
 
             // Establece el contenido de los elementos h3 a una cadena vacía
-            h3_1.textContent = 'App - Veterinary Patient Monitoring';
-            h3_2.textContent = 'App - Cryptocurrency Quote';
-            h3_3.textContent = 'Web - Event promotion';
-            h3_4.textContent = 'App - Expense Control';
-            h3_5.textContent = 'Website - Real Estate';
-            h3_6.textContent = 'Website - Frond End Store';
-            h3_7.textContent = 'Website - Nimbus';
-            h3_8.textContent = 'Website - Neozix';
-            h3_9.textContent = 'App - Live Chat JavaScript';
+            h3_1.textContent = 'App - Live Chat JavaScript';
+            h3_2.textContent = 'Website - emercado ceibal';
+            h3_3.textContent = 'App - Veterinary Patient Monitoring';
+            h3_4.textContent = 'App - Cryptocurrency Quote';
+            h3_5.textContent = 'Web - Event promotion';
+            h3_6.textContent = 'App - Expense Control';
+            h3_7.textContent = 'Website - Real Estate';
+            h3_8.textContent = 'Website - Frond End Store';
+            h3_9.textContent = 'Website - Nimbus';
+            h3_10.textContent = 'Website - Neozix';
 
             // Selecciona los enlaces dentro de la clase .project
             let enlacesCodigo = document.querySelectorAll('.project a');
