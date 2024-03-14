@@ -9,4 +9,11 @@ document.addEventListener('DOMContentLoaded', function () {
             nav.style.display = 'block';
         }
     });
+
+    // Agrega un controlador de eventos de redimensionamiento de ventana
+    window.addEventListener('resize', function () {
+        if (window.innerWidth > 800) {
+            nav.style.display = 'none';
+        }
+    });
 });

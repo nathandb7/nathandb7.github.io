@@ -35,46 +35,9 @@
 </head>
 
 <body>
-    <div class="bolita"></div>
-    <div class="bolita"></div>
-    <div class="bolita"></div>
-    <!-- Agrega tantas bolitas como quieras -->
-
     <header>
-        <div class="hero">
-            <div class="hero-text">
-                <h1 class="animacion">Nathan de Barros</h1>
-                <p class="dev animacion5s">Web Developer: HTML, CSS, JS, React, PHP, MySql</p>
-            </div>
-        </div>
-    </header>
-
-
-    <!-- Menú de escritorio -->
-    <nav class="desktop-menu">
-        <ul>
-            <li><a href="#about" class="a1">Sobre Mí</a></li>
-            <li><a href="#projects" class="a2">Proyectos</a></li>
-            <li><a href="#educacion" class="a3">Educación</a></li>
-            <li><a href="#contact" class="a4">Contacto</a></li>
-            <li>
-                <div class="language-selector">
-                    <select id="language">
-                        <option value="es">Español</option>
-                        <option value="en">English</option>
-                    </select>
-                </div>
-            </li>
-        </ul>
-    </nav>
-
-    <!-- Menú acordeón para pantallas pequeñas -->
-    <div class="mobile-menu">
-        <div class="menu-icon">
-            <i class="fi fi-rr-menu-burger"></i>
-        </div>
-
-        <nav>
+        <!-- Menú de escritorio -->
+        <nav class="desktop-menu">
             <ul>
                 <li><a href="#about" class="a1">Sobre Mí</a></li>
                 <li><a href="#projects" class="a2">Proyectos</a></li>
@@ -90,7 +53,31 @@
                 </li>
             </ul>
         </nav>
+
+        <!-- Menú acordeón para pantallas pequeñas -->
+        <div class="mobile-menu">
+            <div class="menu-icon">
+                <i class="fi fi-rr-menu-burger"></i>
+            </div>
+
+            <nav>
+                <ul>
+                    <li><a href="#about" class="a1">Sobre Mí</a></li>
+                    <li><a href="#projects" class="a2">Proyectos</a></li>
+                    <li><a href="#educacion" class="a3">Educación</a></li>
+                    <li><a href="#contact" class="a4">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="hero">
+        <div class="hero-text">
+            <h1 class="animacion">Nathan de Barros</h1>
+            <p class="dev animacion5s">Web Developer: HTML, CSS, JS, React, PHP, MySql</p>
+        </div>
     </div>
+
     <section class="about-me" id="about">
         <h2 class="about-title">Sobre Mí</h2>
         <div class="about-container">
@@ -245,14 +232,15 @@
             <li>
                 <a href="tel:+59898221793"><i class="fi fi-rs-phone-call icono"></i> (+598) 98 221 793</a>
             </li>
-            <li>                
+            <li>
                 <a href="mailto:nathandb7@gmail.com"><i class="fi fi-rs-envelope icono"></i> nathandb7@gmail.com</a>
             </li>
             <li>
                 <a href="https://nathandb7.github.io/"><i class="fi fi-rs-site-alt icono"></i> nathandb7.github.io</a>
             </li>
             <li>
-                <a href="https://github.com/nathandb7"><i class="fi fi-brands-github icono"></i> github.com/nathandb7</a>
+                <a href="https://github.com/nathandb7"><i class="fi fi-brands-github icono"></i>
+                    github.com/nathandb7</a>
             </li>
         </ul>
     </section>
